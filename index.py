@@ -7,13 +7,13 @@ from keras.models import Sequential
 from keras.layers import Dense
 
 
-df = pd.read_csv('data/thijsBischoff.csv')
+df = pd.read_csv('data/Mees.csv')
 
-# print()
-# print(df)
+print()
+print(df)
 
-x = df.drop(['Thijs_Bischoff'], axis=1)
-y = df['Thijs_Bischoff']
+x = df.drop(['Mees'], axis=1)
+y = df['Mees']
 
 # print()
 # print(x)
@@ -39,7 +39,7 @@ model.add( Dense(units=1, activation='sigmoid') )
 
 model.compile(loss='binary_crossentropy', optimizer='sgd', metrics='accuracy')
 
-model.fit(x_train, y_train, epochs=16, batch_size=32)
+model.fit(x_train, y_train, epochs=128, batch_size=64)
 
 # print()
 # print(model.weights)
@@ -63,4 +63,4 @@ accuracy = accuracy_score(y_test, test_predict_rounded)
 print()
 print(accuracy)
 
-model.save('tfmodel_thijsBischoff')
+model.save('tfmodel_mees')

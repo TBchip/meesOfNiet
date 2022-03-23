@@ -6,7 +6,7 @@ from keras.models import load_model
 csv_path = 'data/test.csv'
 imgs_path = 'data/test/'
 
-model_name = 'tfmodel_thijsBischoff'
+model_name = 'tfmodel_mees'
 
 def formatImgsToCsv(csv, folder_path):
     original_imgs = []
@@ -51,11 +51,11 @@ print(df)
 model = load_model(model_name)
 pred = model.predict(df)
 
-os.system('cls')
 
 for i in range(len(imgs)):
+    os.system('cls')
 
-    answer = 'Thijs' if pred[i][0] >= 0.5 else 'niet Thijs'
+    answer = 'Mees' if pred[i][0] >= 0.5 else 'niet Mees'
     print('De volgende foto is', answer)
     input('Druk op enter om de foto te zien...')
     print()
@@ -63,6 +63,3 @@ for i in range(len(imgs)):
     imgs[i].show()
 
     input('Druk op enter om naar de volgende foto te gaan...')
-    print()
-    print()
-    print()
