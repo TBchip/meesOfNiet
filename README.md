@@ -1,6 +1,6 @@
 # mees of niet
 
-Tenserflow model voor gezichtsherkining.
+Tenserflow neural net voor gezichtsherkining.
 Herkent fotos van Mees Schakenraad.
 
-Testing fotos moeten in data/test/ folder. Dan loadTest.py om model te gebruiken.
+Test fotos moeten in data/test/ folder. Dan loadTest.py om model te gebruiken.
